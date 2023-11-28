@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="GaussianEditor: Editing 3D Gaussians Delicately with Text Instructions.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <title>TiNeuVox: Fast Dynamic Radiance Fields with</br>Time-Aware Neural Voxels</title> -->
+  <title>GaussianEditor: Editing 3D Gaussians Delicately with Text Instructions.</title>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="../img/favicon.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">GaussianEditor:</br>
+            Editing 3D Gaussians Delicately with</br>Text Instructions</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://jaminfong.cn/">Jiemin Fang</a><sup>*</sup>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?view_op=list_works&hl=zh-CN&user=9Nw_mKAAAAAJ">Junjie Wang</a><sup>*</sup>,</span>
+            <span class="author-block">
+              <a href="https://sites.google.com/site/zxphistory/">Xiaopeng Zhang</a>,</span>
+            <span class="author-block">
+              <a href="http://lingxixie.com/">Lingxi Xie</a>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?hl=en&user=61b6eYkAAAAJ">Qi Tian</a></span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">Huawei Inc.</span>
+          </div>
+
+          * <i>denotes equal contributions.</i>  </br>
+
+          <!-- <div class="is-size-5 publication-authors">
+            <span>ACM SIGGRAPH Asia 2022</span>
+          </div> -->
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=KWtALsigR3k"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code (To Be Released)</span>
+                  </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <!-- <h2 class="title is-3">Abstract</h2> -->
+        <!-- <p align="center">
+          <image width="100%" src="image/method.jpg" class="img-responsive" alt="overview">
+        </p> -->
+        <video poster="" id="fangzhou" autoplay muted loop playsinline height="100%">
+          <source src="./video/fangzhou_all.mp4"
+                  type="video/mp4">
+        </video>
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          Recently, impressive results have been achieved in 3D scene editing with text instructions based on a 2D diffusion model. However, current diffusion models primarily generate images by predicting noise in the latent space, and the editing is usually applied to the whole image, which makes it challenging to perform delicate, especially localized, editing for 3D scenes. Inspired by recent 3D Gaussian splatting, we propose a systematic framework, named GaussianEditor, to edit 3D scenes delicately via 3D Gaussians with text instructions. Benefiting from the explicit property of 3D Gaussians, we design a series of techniques to achieve delicate editing. Specifically, we first extract the region of interest (RoI) corresponding to the text instruction, aligning it to 3D Gaussians. The Gaussian RoI is further used to control the editing process. Our framework can achieve more delicate and precise editing of 3D scenes than previous methods while enjoying much faster training speed, i.e. within <b>20 minutes</b> on a single V100 GPU, more than twice as fast as Instruct-NeRF2NeRF (45 minutes -- 2 hours)
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="text-center">
+          <div style="position:relative;padding-top:56.25%;">
+              <iframe src="https://www.youtube.com/embed/KWtALsigR3k?si=CRxpbOX-mvbfmO6m" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+          </div>
+      </div>
+      </div>
+    </div>
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">360° Scenes Editing</h2>          
+          <video poster="" id="bicycle1" autoplay muted loop playsinline height="100%">
+            <source src="./video/bicycle/bicycle1.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Multiple rounds Editing</h2>          
+          <video poster="" id="bicycle2" autoplay muted loop playsinline height="100%">
+            <source src="./video/bicycle/bicycle2.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Compare With Instruct-NeRF2NeRF</h2>          
+          <video poster="" id="compare_with_in2n" autoplay muted loop playsinline height="100%">
+            <source src="./video/compare_with_in2n.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Complex Multi-Object Scenes</h2>          
+          <video poster="" id="counter" autoplay muted loop playsinline height="100%">
+            <source src="./video/counter.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">More Examples</h2>          
+          <video poster="" id="bear" autoplay muted loop playsinline height="100%">
+            <source src="./video/bear.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Extension</h2>          
+          <video poster="" id="gaussiandreamer" autoplay muted loop playsinline height="100%">
+            <source src="./video/gaussian_dreamer.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">Citation</h2>
+    <pre><code>@article{GaussianEditor,
+  author = {Fang, Jiemin and Wang, Junjie and Zhang, Xiaopeng and Xie, Lingxi and Tian, Qi},
+  title = {GaussianEditor: Editing 3D Gaussians Delicately with Text Instructions},
+  year = {2023},
+  journal={arXiv preprint arXiv}
+}</code></pre>
+  </div>
+</section>
+
+</body>
+</html>
