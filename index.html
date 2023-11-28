@@ -1,11 +1,57 @@
 <!DOCTYPE html>
 <html>
+  
 <head>
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+        <a class="navbar-item" href="https://gaussianeditor.github.io/">
+        <span class="icon">
+            <i class="fas fa-home"></i>
+        </span>
+        </a>
+  
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            More Research
+          </a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://guanjunwu.github.io/4dgs/">
+              4D Gaussian Splatting
+            </a>
+            <a class="navbar-item" href="https://taoranyi.com/gaussiandreamer/">
+              GaussianDreamer
+            </a>
+            <a class="navbar-item" href="https://jumpat.github.io/SA3D/">
+              Segment Anything in 3D with NeRFs
+            </a>
+            <a class="navbar-item" href="https://jaminfong.cn/tineuvox/">
+              TiNeuVox
+            </a>
+            <a class="navbar-item" href="https://taoranyi.com/gneuvox/">
+              GNeuVox
+             </a>
+            <a class="navbar-item" href="https://jaminfong.cn/neusample/">
+              NeuSample
+            </a>
+          </div>
+        </div>
+      </div>
+  
+    </div>
+  </nav>
+
   <meta charset="utf-8">
   <meta name="description"
         content="GaussianEditor: Editing 3D Gaussians Delicately with Text Instructions.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- <title>TiNeuVox: Fast Dynamic Radiance Fields with</br>Time-Aware Neural Voxels</title> -->
   <title>GaussianEditor: Editing 3D Gaussians Delicately with Text Instructions.</title>
 
   <script>
@@ -125,7 +171,7 @@
         </video>
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
-          Recently, impressive results have been achieved in 3D scene editing with text instructions based on a 2D diffusion model. However, current diffusion models primarily generate images by predicting noise in the latent space, and the editing is usually applied to the whole image, which makes it challenging to perform delicate, especially localized, editing for 3D scenes. Inspired by recent 3D Gaussian splatting, we propose a systematic framework, named GaussianEditor, to edit 3D scenes delicately via 3D Gaussians with text instructions. Benefiting from the explicit property of 3D Gaussians, we design a series of techniques to achieve delicate editing. Specifically, we first extract the region of interest (RoI) corresponding to the text instruction, aligning it to 3D Gaussians. The Gaussian RoI is further used to control the editing process. Our framework can achieve more delicate and precise editing of 3D scenes than previous methods while enjoying much faster training speed, i.e. within <b>20 minutes</b> on a single V100 GPU, more than twice as fast as Instruct-NeRF2NeRF (45 minutes -- 2 hours)
+          Recently, impressive results have been achieved in 3D scene editing with text instructions based on a 2D diffusion model. However, current diffusion models primarily generate images by predicting noise in the latent space, and the editing is usually applied to the whole image, which makes it challenging to perform delicate, especially localized, editing for 3D scenes. Inspired by recent 3D Gaussian splatting, we propose a systematic framework, named GaussianEditor, to edit 3D scenes delicately via 3D Gaussians with text instructions. Benefiting from the explicit property of 3D Gaussians, we design a series of techniques to achieve delicate editing. Specifically, we first extract the region of interest (RoI) corresponding to the text instruction, aligning it to 3D Gaussians. The Gaussian RoI is further used to control the editing process. Our framework can achieve more delicate and precise editing of 3D scenes than previous methods while enjoying much faster training speed, i.e. within <b>20 minutes</b> on a single V100 GPU, more than twice as fast as Instruct-NeRF2NeRF (45 minutes -- 2 hours).
         </div>
       </div>
     </div>
@@ -150,7 +196,7 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">360° Scenes Editing</h2>          
+        <h2 class="title is-3">360° Scene Editing</h2>          
           <video poster="" id="bicycle1" autoplay muted loop playsinline height="100%">
             <source src="./video/bicycle/bicycle1.mp4"
                     type="video/mp4">
@@ -165,7 +211,7 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Multiple rounds Editing</h2>          
+        <h2 class="title is-3">Multiple-Round Editing</h2>          
           <video poster="" id="bicycle2" autoplay muted loop playsinline height="100%">
             <source src="./video/bicycle/bicycle2.mp4"
                     type="video/mp4">
@@ -180,7 +226,7 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Compare With Instruct-NeRF2NeRF</h2>          
+        <h2 class="title is-3">Comparisons with Instruct-NeRF2NeRF</h2>          
           <video poster="" id="compare_with_in2n" autoplay muted loop playsinline height="100%">
             <source src="./video/compare_with_in2n.mp4"
                     type="video/mp4">
@@ -225,7 +271,7 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Extension</h2>          
+        <h2 class="title is-3">Extension with GaussianDreamer</h2>          
           <video poster="" id="gaussiandreamer" autoplay muted loop playsinline height="100%">
             <source src="./video/gaussian_dreamer.mp4"
                     type="video/mp4">
@@ -248,6 +294,20 @@
 }</code></pre>
   </div>
 </section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+          The website template was borrowed from <a href="https://nerfies.github.io/">Nerfies</a>. Thanks for their awesome work!
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
 
 </body>
 </html>
